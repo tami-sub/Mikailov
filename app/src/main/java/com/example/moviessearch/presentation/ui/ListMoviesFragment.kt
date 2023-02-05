@@ -58,7 +58,7 @@ class ListMoviesFragment : Fragment() {
                 showMainContent()
             }
             favoriteBtn.setOnClickListener {
-                Toast.makeText(activity,"Избранные в разработке", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,"Избранное в разработке", Toast.LENGTH_SHORT).show()
             }
         }
     }

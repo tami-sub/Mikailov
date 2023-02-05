@@ -15,15 +15,19 @@ class MovieViewModel @Inject constructor(
     private val kinopoiskInteractor: IKinopoiskInteractor,
 ) : ViewModel() {
 
-    private var _movieInfoLiveData = MutableLiveData<Film>()
-    val movieInfoLiveData: LiveData<Film> = _movieInfoLiveData
+    private var _movieInfoLiveData = MutableLiveData<Film?>()
+    val movieInfoLiveData: LiveData<Film?> = _movieInfoLiveData
+
+    private var _errorLiveData = MutableLiveData<Throwable>()
+    val errorLiveData: LiveData<Throwable> = _errorLiveData
 
     fun getMovieInfo(id: String) {
         viewModelScope.launch {
             kinopoiskInteractor.getFilmById(id).onSuccess {
                 _movieInfoLiveData.value = it
             }.onFailure {
-
+                _movieInfoLiveData.value = null
+                _errorLiveData.value = it
             }
         }
     }
