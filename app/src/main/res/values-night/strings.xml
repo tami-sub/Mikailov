@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="popular">Популярные</string>
+    <string name="favorite">Избранное</string>
+    <string name="name">Name</string>
+    <string name="type">Type</string>
+    <string name="countries">Страны: </string>
+    <string name="genres">Жанры: </string>
+    <string name="title">Название фильма</string>
+    <string name="description">Описание</string>
+    <string name="refresh">Обновить</string>
+</resources>

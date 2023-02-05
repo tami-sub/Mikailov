@@ -1,0 +1,32 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_connectivity"/>
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/refresh"
+            android:layout_width="155dp"
+            android:layout_height="48dp"
+            android:text="@string/refresh"
+            android:layout_marginTop="10dp"
+            style="@style/unpicked_text"
+            android:background="@drawable/unpicked_button_background"
+            android:padding="10dp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</layout>
